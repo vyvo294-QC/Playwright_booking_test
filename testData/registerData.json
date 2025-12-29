@@ -1,0 +1,200 @@
+[
+  {
+    "username": "vyvy1",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy1@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy2@example.com",
+    "expected": "fail",
+    "errorMessage": "Đây là trường bắt buộc !"
+  },
+  {
+    "username": "VyVy3",
+    "password": "",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy3@example.com",
+    "expected": "fail",
+    "errorMessage": "Đây là trường bắt buộc !"
+  },
+  {
+    "username": "VyVy4",
+    "password": "pass123",
+    "confirmPassword": "",
+    "fullname": "Vo Vy",
+    "email": "vy4@example.com",
+    "expected": "fail",
+    "errorMessage": "Đây là trường bắt buộc !"
+  },
+  {
+    "username": "VyVy5",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "",
+    "email": "vy5@example.com",
+    "expected": "fail",
+    "errorMessage": "Đây là trường bắt buộc !"
+  },
+  {
+    "username": "VyVy6",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "",
+    "expected": "fail",
+    "errorMessage": "Đây là trường bắt buộc !"
+  },
+  {
+    "username": "ABC XYZ",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy7@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "ABC XYZ 123",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy8@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "@#$%^&*12 ABC",
+    "password": "pass123",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy9@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "VyVy10",
+    "password": "pass12",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy10@example.com",
+    "expected": "fail",
+    "errorMessage": "Mật khẩu phải có ít nhất 6 kí tự !"
+  },
+  {
+    "username": "VyVy11",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy",
+    "email": "vy11@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "vyvy12",
+    "password": "123456",
+    "confirmPassword": "pass123",
+    "fullname": "Vo Vy",
+    "email": "vy12@example.com",
+    "expected": "fail",
+    "errorMessage": "Mật khẩu phải có ít nhất 6 kí tự !"
+  },
+  {
+    "username": "VyVy13",
+    "password": "12345",
+    "confirmPassword": "pass12",
+    "fullname": "Vo Vy",
+    "email": "vy13@example.com",
+    "expected": "fail",
+    "errorMessage": "Mật khẩu phải có ít nhất 6 kí tự !"
+  },
+  {
+    "username": "VyVy14",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy",
+    "email": "vy14@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "VyVy15",
+    "password": "1234567",
+    "confirmPassword": "1234567",
+    "fullname": "Vo Vy",
+    "email": "vy15@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "VyVy16",
+    "password": "12345",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy",
+    "email": "vy16@example.com",
+    "expected": "fail",
+    "errorMessage": "Mật khẩu không khớp !"
+  },
+  {
+    "username": "VyVy17",
+    "password": "123456",
+    "confirmPassword": "1234567",
+    "fullname": "Vo Vy",
+    "email": "vy17@example.com",
+    "expected": "fail",
+    "errorMessage": "Mật khẩu không khớp !"
+  },
+  {
+    "username": "VyVy18",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy%#%)(_+",
+    "email": "vy18@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "VyVy19",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy19",
+    "email": "vy18@example.com",
+    "expected": "fail",
+    "errorMessage": "Họ và tên không chứa số !"
+  },
+  {
+    "username": "VyVy20",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy19",
+    "email": "vy18",
+    "expected": "fail",
+    "errorMessage": "Vui lòng nhập đúng định dạng email"
+  },
+  {
+    "username": "Vy Vy",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy19",
+    "email": "vy21@example.com",
+    "expected": "fail",
+    "errorMessage": "Tài khoản đã tồn tại!"
+  },
+  {
+    "username": "VyVy22",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy1",
+    "email": "vy22@example.com",
+    "expected": "success"
+  },
+  {
+    "username": "VyVy23",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "fullname": "Vo Vy1",
+    "email": "vy@test.com",
+    "expected": "fail",
+    "errorMessage": "Email đã tồn tại!"
+  }
+]
