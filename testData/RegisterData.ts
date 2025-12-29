@@ -25,11 +25,11 @@ export const registerData = [
   },
   {
     case: "Bỏ trống mật khẩu",
-    username: "VyVy3",
+    username: `VyVy3_${randomId}`,
     password: "",
     confirmPassword: "pass123",
     fullname: "Vo Vy",
-    email: "vy3@example.com",
+    email: `vy3_${randomId}@example.com`,
     expected: "fail",
     errorMessage: "Đây là trường bắt buộc !"
   },
@@ -41,7 +41,7 @@ export const registerData = [
     fullname: "Vo Vy",
     email: "vy4@example.com",
     expected: "fail",
-    errorMessage: "Đây là trường bắt buộc !"
+    errorMessage: "Mật khẩu không khớp !"
   },
   {
     case: "Bỏ trống họ tên",
@@ -67,7 +67,7 @@ export const registerData = [
   // --- KIỂM TRA TÀI KHOẢN ---
   {
     case: "Tài khoản chứa ký tự chữ",
-    username: "ABC XYZX",
+    username: `ABC XYZX_${randomId}`,
     password: "pass123",
     confirmPassword: "pass123",
     fullname: "Vo Vy",
@@ -76,7 +76,7 @@ export const registerData = [
   },
   {
     case: "Tài khoản gồm chữ và số",
-    username: "ABC XYZ 123",
+    username: `ABC XYZ 123_${randomId}`,
     password: "pass123",
     confirmPassword: "pass123",
     fullname: "Vo Vy",
@@ -85,7 +85,7 @@ export const registerData = [
   },
   {
     case: "Tài khoản chứa ký tự đặc biệt",
-    username: "@#$%^&*12 ABC",
+    username: `@#$%^&*12 ABC_${randomId}`,
     password: "pass123",
     confirmPassword: "pass123",
     fullname: "Vo Vy",
@@ -106,7 +106,7 @@ export const registerData = [
   },
   {
     case: "Mật khẩu 6 ký tự",
-    username: "VyVy11",
+    username: `VyVy11_${randomId}`,
     password: "123456",
     confirmPassword: "123456",
     fullname: "Vo Vy",
@@ -135,7 +135,7 @@ export const registerData = [
   },
   {
     case: "Nhập lại mật khẩu 6 ký tự",
-    username: "VyVy14",
+    username: `vyvy14_${randomId}`,
     password: "123456",
     confirmPassword: "123456",
     fullname: "Vo Vy",
@@ -219,7 +219,7 @@ export const registerData = [
     username: `autoUserSameName_${randomId}`,
     password: "123456",
     confirmPassword: "123456",
-    fullname: "Vo Vy1",
+    fullname: "Vo Vy",
     email: `sameName_${randomId}@example.com`,
     expected: "success"
   },
@@ -228,7 +228,7 @@ export const registerData = [
     username: "VyVy23",
     password: "123456",
     confirmPassword: "123456",
-    fullname: "Vo Vy1",
+    fullname: "Vo Vy",
     email: "vy@test.com",
     expected: "fail",
     errorMessage: "Email đã tồn tại!"

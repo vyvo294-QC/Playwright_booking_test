@@ -32,9 +32,14 @@ for (const data of registerData) {
 
         // Expected
         if (data.expected === "success") {
+
+            await page.getByRole("button", { name: "Đăng ký" }).click();
+
             await expect(page.locator('.swal2-title'))
                 .toHaveText('Đăng ký thành công');
+
         } else {
+
             if (!data.errorMessage) {
                 throw new Error("Missing errorMessage in test data");
             }
@@ -43,7 +48,6 @@ for (const data of registerData) {
 
             await expect(page.getByText(data.errorMessage)).toBeVisible();
         }
-
 
     });
 
