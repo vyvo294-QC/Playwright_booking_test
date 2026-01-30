@@ -9,7 +9,7 @@ export class BookingPage {
       '//*[@id="vertical-tabpanel-0"]//a'
     );
 
-    // wait
+    // thêm chờ 
     await this.page.waitForTimeout(3000);
 
     const count = await showtimes.count();
@@ -18,7 +18,7 @@ export class BookingPage {
       throw new Error('No showtimes available for selected cinema');
     }
 
-    // ✅ Click suất chiếu đầu tiên
+    // Click suất chiếu đầu tiên
     await showtimes.first().click();
   }
 

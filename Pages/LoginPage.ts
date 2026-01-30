@@ -1,7 +1,14 @@
 import { Page, expect } from '@playwright/test';
+import { LoginPageLocator } from './Locators/LoginPage.locator';
 
 export class LoginPage {
-  constructor(private page: Page) {}
+  readonly page: Page;
+  readonly locator: LoginPageLocator; // khai báo thuộc tính
+
+  constructor(page: Page) {
+    this.page = page;
+    this.locator = new LoginPageLocator(page);
+  }
 
   async goto() {
     await this.page.goto('https://demo1.cybersoft.edu.vn/', {
@@ -10,29 +17,26 @@ export class LoginPage {
   }
 
   async openLoginForm() {
-    await this.page
-      .locator('h3.MuiTypography-h3', { hasText: 'Đăng Nhập' })
-      .click();
+    await this.locator.openLoginFormButton.click();
   }
 
   async login(username: string, password: string, remember = false) {
-    await this.page.locator('#taiKhoan').fill(username);
-    await this.page.locator('#matKhau').fill(password);
+    await this.locator.usernameInput.fill(username);
+    await this.locator.passwordInput.fill(password);
 
     if (remember) {
-      await this.page
-        .locator('input[name="remember"]')
-        .click({ force: true });
+      // 
+      await this.locator.rememberCheckbox.click({ force: true });
     }
 
-    await this.page
-      .locator('//*[@id="root"]/div/div[2]/main/div/form/button/span[1]')
-      .click();
+    // 
+    await expect(this.locator.loginButton).toBeVisible();
+    await this.locator.loginButton.click();
   }
 
-  async verifyLoginSuccess() {
+async verifyLoginSuccess() {
     await expect(
-      this.page.getByText('đăng nhập thành công')
-    ).toBeVisible();
+      this.page.getByText(/đăng nhập thành công/i)
+    ).toBeVisible({ timeout: 5000 });
   }
 }
